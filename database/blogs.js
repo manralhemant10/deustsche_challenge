@@ -77,8 +77,8 @@ function getBlogundereview(username,page,sort='desc'){
 
                  `
                 else
-                querygetBlogs=`select a.blog_id,a.title,a.content,b.new_title,a.updated_date
-                b.new_data,a.status from blog_data a left join
+                querygetBlogs=`select a.blog_id,a.title,a.content,b.new_title,
+                b.new_data,a.status,a.updated_date from blog_data a left join
                 update_blog b on  a.blog_id=b.blog_id where a.status<>'ACTIVE' 
                 order by  a.updated_date ${sort} limit 0,${page}`
 

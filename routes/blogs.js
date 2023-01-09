@@ -10,7 +10,7 @@ router.use(bodyParser.json())
 
 router.get('/read/:underreview?',checkToken, async (req, res) => {
   let data
-    try{
+    try{ 
       if(typeof(req.query.id) == "undefined"){
         if(typeof(req.params.underreview)=="undefined")
         data = await getBlogs(req.username,req.query.page,req.query.sort)

@@ -11,6 +11,6 @@ app.use('/auth',authRoute)
 
 app.use('/blog',blogRoute)
 
-app.listen(process.env.PORT || port, () => {
+app.listen(port, () => {
   console.log(`Example app listening on port ${port}`)
 })
